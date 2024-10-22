@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="library(2).css"> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="library(2).css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title> المهندس - جارد شهري</title>
+   
+  </head>
+  <body style="padding: 0; margin: 0;overflow: hidden; ">
+    <div class="all" >
+      <div class="crud">
+        <div class="container-nav">
+          <div class="empty-div">
+            <div >
+              <div id="cart"
+                style=" font-size: 20px; padding-top: 10px; width: 30px; height: 25px; background: #ffffff3b; " class="fa-solid fa-cart-shopping position" ></div> 
+                <div id="calendarOpen"
+                style=" font-size: 20px; padding-top: 10px; width: 30px; height: 25px; background: #ffffff3b;position: absolute; margin-top: 69px; " class="fa-solid fa-calendar-days position" ></div>
+                <div id="calendarClose" 
+                style=" font-size: 20px; padding-top: 10px; width: 30px; height: 25px; background: #ffffff3b;position: absolute; margin-top: 69px; " class="fa-solid fa-xmark position hide" ></div>
+            </div>
+            <div class="clock"></div>
+          
+          </div>
+          <div class="center-div">
+            <h5 id="font-almohands" style="font-size: 50px">مكتبه المهندس</h5>
+            <h5 style="letter-spacing: 5px">product28-MANAGMENT SYSTEM</h5>
+          </div>
+        </div>
+  
+       
+        <!-- </div> -->
+        
+        <div class="conAll hide">
+          <div class="conDate ">
+            <div id="dateCalendar " ><p style="margin-left: 70px ; font-size: 20px;
+              font-family: 'Anton', sans-serif;
+              font-weight: 700;" id="date"></p></div>
+         
+  
+         
+   
+   <div class="item" style=" color: white; "><a href="index.html">1</a></div>  
+        <div class="item"><a href="2.html">2</a></div>  
+        <div class="item"><a  href="3.html">3</a></div>  
+        <div class="item"><a href="4.html">4</a></div>  
+        <div class="item"><a href="5.html">5</a></div>  
+        <div class="item"><a href="6.html">6</a></div>  
+        <div class="item"><a href="7.html">7</a></div>  
+        <div class="item"><a href="8.html">8</a></div>  
+        <div class="item"><a href="9.html">9</a></div>  
+        <div class="item"><a href="10.html">10</a></div>  
+        <div class="item"><a href="11.html" >11</a></div>  
+        <div class="item"><a href="12.html">12</a></div>  
+        <div class="item"><a href="13.html">13</a></div>  
+        <div class="item"><a href="14.html">14</a></div>  
+        <div class="item"><a href="15.html">15</a></div>  
+        <div class="item"><a href="16.html">16</a></div>  
+        <div class="item"><a href="17.html">17</a></div>  
+        <div class="item"><a href="18.html">18</a></div>  
+        <div class="item"><a  href="19.html">19</a></div>  
+        <div class="item"><a href="20.html">20</a></div>  
+        <div class="item"><a href="21.html">21</a></div>  
+        <div class="item"><a href="22.html">22</a></div>  
+        <div class="item"><a href="23.html">23</a></div>  
+        <div class="item"><a href="24.html">24</a></div>  
+        <div class="item"><a href="25.html">25</a></div>  
+        <div class="item"><a href="26.html">26</a></div>  
+        <div class="item"><a href="27.html">27</a></div>  
+        <div class="item"><a style="background-color: red; color: white; " href="28.html">28</a></div>  
+        <div class="item"><a href="29.html">29</a></div>  
+        <div class="item"><a href="30.html">30</a></div>  
+        <div class="item" style="border: none;"></div>  
+        <div class="item"><a href="31.html">31</a></div>  
+          </div>
+         </div>
+        <div id="btnOpen">
+          <div id="open" class="fa-solid fa-plus position"></div>
+        </div>
+        <div id="btnClose" class="hide">
+          <div id="close" class="fa-solid fa-xmark position"></div>
+        </div>
+        <div class="all-input hide">
+          <div class="container-input">
+            <div class="entryarea">
+              <input class="input" onkeyup="getTotal()" id="title" type="text" required />
+              <div class="labelline">ادخل الصنف</div>
+            </div>
+          </div>
+  
+          <div class="container-input">
+            <div class="entryarea">
+              <input class="input"  onkeyup="getTotal()" id="number" type="number" required />
+              <div class="labelline">ادخل العدد</div>
+            </div>
+          </div>
+  
+          <div class="container-input">
+            <div class="entryarea">
+              <input class="input"  onkeyup="getTotal()" id="price" type="number" required />
+              <div class="labelline">ادخل السعر</div>
+            </div>
+          </div>
+          <button id="create">create</button>
+  
+          <small id="total"> </small>
+        </div>
+      </div>
+      <div class="outputs" style="direction: rtl">
+        <table>
+          <tr>
+            <th>id</th>
+            <th>الصنف</th>
+            <th>العدد</th>
+            <th>السعر</th>
+            <th>الاجمالي</th>
+            <th>تحديث</th>
+  
+            <th>حذف</th>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+  
+          <tbody id="tbody"></tbody>
+        </table>
+  
+        <div id="deleteAll"></div>
+      </div>
+    </div>
+  
+      <!--======================================== Expenses  ========================================-->
+  
+      <!-- bar-input -->
+      
+        <br />
+        <br />
+        <br />
+        <div id="Expenses" style="width: 100%;  ">
+          <h1
+            style="
+              width: 50%;
+              background-color: #ff656500;
+              color: #fff;
+              display: flex;
+              justify-content: center;
+              margin-left: 25%;
+              border: 9px solid #fff;
+              border-radius: 25px;
+            "
+          >
+            الـــــــمصاريــــــــــف
+          </h1>
+        </div>
+      
+      <div class="ExpensesContent">
+        <div style="display: flex; flex-direction: column; padding-top: 20px">
+          <div id="buttonOpen">
+            <div id="open" class="fa-solid fa-plus position"></div>
+          </div>
+          <div id="buttonClose" class="hide">
+            <div id="close" class="fa-solid fa-xmark position"></div>
+          </div>
+        </div>
+      </div>
+      <div class="all-inputs hide">
+        <div class="container-input">
+          <div class="entryarea">
+            <input class="input"  id="straintitle1" type="text" required />
+            <div class="labelline">ادخل الصنف</div>
+          </div>
+        </div>
+  
+        <div class="container-input">
+          <div class="entryarea">
+            <input class="input" 
+              onkeyup="getTotal()"
+              id="strainPrice1"
+              type="number"
+              required
+            />
+            <div class="labelline">ادخل السعر</div>
+          </div>
+        </div>
+        <button style="width: 100%" id="create2">create</button>
+      </div>
+      <!-- <p id="st" style="background: red;">1</p> -->
+      <!-- mine Container -->
+  
+      <div class="outputs2" style="direction: rtl">
+        <table>
+          <tr style="padding: 50px 50px">
+            <th>id</th>
+            <th>الصنف</th>
+            <th>السعر</th>
+            <th id="st"></th>
+          </tr>
+          <tbody id="tbody2"></tbody>
+        </table>
+      </div>
+      <div id="deleteAll2"></div>
+      <!-- Comment  DIV-->
+       <br>
+       <footer>
+  
+         <div class="commentDiv">
+           
+          <!-- <input placeholder="asdcx" name=""  > -->
+          <input type="text" name="text" id="footerComment" placeholder="....إضافه ملاحظه        ">
+          <div class="commentText" id="output">
+            
+          </div>
+  
+         </div>
+       </footer>
+  
+  
+    </div>
+
+  </body>
+
+  <script  > 
+    // var
+    let btnOpen = document.getElementById("btnOpen");
+    let btnClose = document.getElementById("btnClose");
+    let cart = document.getElementById("cart");
+    let cont = document.querySelector(".all-input");
+    
+    let buttonOpen = document.getElementById("buttonOpen");
+    let buttonClose = document.getElementById("buttonClose");
+    let conts = document.querySelector(".all-inputs");
+    // let expenses
+    
+    let straintitle1 = document.getElementById("straintitle1");
+    let strainPrice1 = document.getElementById("strainPrice1");
+    let create2 = document.getElementById("create2");
+    
+    let title = document.getElementById("title");
+    let number = document.getElementById("number");
+    let price = document.getElementById("price");
+    let total = document.getElementById("total");
+    let submit = document.getElementById("create");
+    // commentDiv
+    
+     const input = document.getElementById('footerComment');  
+     const output = document.getElementById('output');  
+    
+     //Calendar
+     let calendarOpen = document.getElementById("calendarOpen");
+     let calendarClose = document.getElementById("calendarClose");
+     let conAll = document.querySelector(".conAll");
+    
+    
+    
+    calendarOpen.onclick = function () {
+      this.classList.add("hide");
+      conAll.classList.remove("hide");
+      calendarClose.classList.remove("hide");
+      
+    };
+    
+    calendarClose.onclick = function () {
+      this.classList.add("hide");
+      calendarOpen.classList.remove("hide");
+      conAll.classList.add("hide");
+    };
+     
+    
+     // تشغيل النص المحفوظ من localStorage عند تحميل الصفحة 
+     window.onload = function() {  
+      const savedText = localStorage.getItem('textInput28');  
+      if (savedText) {  
+      output.textContent = savedText;  
+      }  
+      };  
+     
+      // تحديث div عند الكتابة 
+      input.addEventListener('input', function() {  
+      output.textContent = input.value;  
+      });  
+     
+      input.addEventListener('blur', function() {  
+      localStorage.setItem('textInput28', input.value);  
+      input.value = ''; });    
+    let mood = "create";
+    // clock
+    function clock() {
+      let date = new Date();
+      let hours = date.getHours();
+      let minuts = date.getMinutes();
+      let flag = "AM";
+      if (hours == 0) {
+        hours = 12;
+      }
+    
+      if (hours > 12) {
+        hours = hours - 12;
+      }
+    
+      document.querySelector(".clock").innerText = ` ${hours}:${minuts}`;
+    
+      setTimeout(function () {
+        clock();
+      }, 1000);
+    }
+    clock();
+    document.getElementById("cart").addEventListener("click", function () {
+      document.getElementById("Expenses").scrollIntoView({
+        // behavior: 'smooth'
+      });
+    });
+    //  hide & open NAV
+    
+    btnOpen.onclick = function () {
+      this.classList.add("hide");
+      cont.classList.remove("hide");
+      btnClose.classList.remove("hide");
+      conts.classList.add("hide");
+      buttonOpen.classList.remove("hide");
+      buttonClose.classList.add("hide");
+    };
+    
+    btnClose.onclick = function () {
+      this.classList.add("hide");
+      btnOpen.classList.remove("hide");
+      cont.classList.add("hide");
+    };
+    //== CRUD
+    // console.log(title,number,price);
+    
+    // get total
+    
+    function getTotal() {
+      if (price.value != "") {
+        let result = +number.value * +price.value;
+        total.innerHTML = result;
+        total.style.background = "#10ff07";
+        total.style.transition = "2.5s ease";
+      } else {
+        total.innerHTML = "";
+        total.style.background = "#fff";
+        total.style.transition = "2.5s ease";
+      }
+    }
+    // create product28
+    // save localStorge
+    let dataPro;
+    if (localStorage.product28 != null) {
+      dataPro = JSON.parse(localStorage.product28);
+    } else {
+      dataPro = [];
+    }
+    
+    submit.onclick = function () {
+      let newPro = {
+        title: title.value,
+        number: number.value,
+        price: price.value,
+        total: total.innerHTML,
+      };
+    
+      if (title.value != "" && number.value != "" && price.value != "")
+        if (mood === "create") {
+          if (newPro.cont > 1) {
+            for (let i = 0; i < newPro.cont; i++) {
+              dataPro.push(newPro);
+            }
+          } else {
+            dataPro.push(newPro);
+          }
+        } else {
+          dataPro[tmp] = newPro;
+          mood = "create";
+          submit.innerHTML = "create";
+          cont.classList.add("hide");
+          btnOpen.classList.remove("hide");
+          btnClose.classList.add("hide");
+          title.style.border = "3px solid #fff";
+          number.style.border = "3px solid #fff";
+          price.style.border = "3px solid #fff";
+        }
+      localStorage.setItem("product28", JSON.stringify(dataPro));
+    
+      clearData();
+      showData();
+    };
+    
+    function clearData() {
+      title.value = "";
+      number.value = "";
+      price.value = "";
+      total.innerHTML = "";
+    }
+    // read
+    
+    function showData() {
+      getTotal();
+      let table = "";
+      for (let i = 0; i < dataPro.length; i++) {
+        table += `
+        
+        <tr>
+                    <td>${i + 1}</td>
+                    <td>${dataPro[i].title}</td>
+                    <td>${dataPro[i].number}</td>
+                    <td id="myInput" >${dataPro[i].price}</td>
+                    <td>${dataPro[i].total}</td>
+                    <td><button onclick=" updateData(${i})" id="update">update</button></td>
+                    <td><button onclick=" deleteData(${i})" id="delete">delete</button></td>
+        </tr>
+                `;
+      }
+      document.getElementById("tbody").innerHTML = table;
+      let btnDelete = document.getElementById("deleteAll");
+      if (dataPro.length > 0) {
+        btnDelete.innerHTML = ` <button onclick="deleteAll()"  >Delete All </button>`;
+      } else {
+        btnDelete.innerHTML = "";
+      }
+    }
+    showData();
+    // cont
+    // delete
+    function deleteData(i) {
+      dataPro.splice(i, 1);
+      localStorage.product28 = JSON.stringify(dataPro);
+      showData();
+    }
+    function deleteAll() {
+      localStorage.clear();
+      dataPro.splice(0);
+      showData();
+    }
+    
+    // update
+    function updateData(i) {
+      title.value = dataPro[i].title;
+      number.value = dataPro[i].number;
+      price.value = dataPro[i].price;
+      getTotal();
+    
+      title.style.border = " 5px solid green";
+      number.style.border = " 5px solid green";
+      price.style.border = " 5px solid green";
+      submit.innerHTML = "UPDATE";
+      cont.classList.remove("hide");
+      btnOpen.classList.add("hide");
+      btnClose.classList.remove("hide");
+    
+      mood = "update";
+      tmp = i;
+      scroll({
+        top: 0,
+        behavior: "smooth",
+      });
+    }
+    // search
+    // clean Data
+    
+    // ================================================= Expenses =============================================================//
+    
+    buttonOpen.onclick = function () {
+      this.classList.add("hide");
+      conts.classList.remove("hide");
+      buttonClose.classList.remove("hide");
+    
+      cont.classList.add("hide");
+      btnOpen.classList.remove("hide");
+      btnClose.classList.add("hide");
+    };
+    
+    buttonClose.onclick = function () {
+      this.classList.add("hide");
+      buttonOpen.classList.remove("hide");
+      conts.classList.add("hide");
+    };
+    
+    let dataPro2;
+    if (localStorage.store28 != null) {
+      dataPro2 = JSON.parse(localStorage.store28);
+    } else {
+      dataPro2 = [];
+    }
+    
+    let sum = 0;
+    
+    create2.onclick = function () {
+      let newPro2 = {
+        strainPrice1: parseInt(strainPrice1.value), // تحويل القيمة إلى عدد صحيح
+        straintitle1: straintitle1.value,
+      };
+    
+      if (strainPrice1.value != "" && straintitle1.value != "") {
+        dataPro2.push(newPro2);
+    
+        // حساب المجموع فقط لأسعار المنتجات
+        const sum = dataPro2.reduce((acc, obj) => acc + obj.strainPrice1, 0);
+        document.getElementById("st").innerHTML = `الناتج = ${sum}`;
+    
+        localStorage.setItem("store28", JSON.stringify(dataPro2));
+        clearData2();
+        showData2();
+      }
+    };
+    
+    // clear Data
+    
+    function clearData2() {
+      strainPrice1.value = "";
+      straintitle1.value = "";
+    }
+    // read
+    
+    function showData2() {
+      let table2 = "";
+      for (let z = 0; z < dataPro2.length; z++) {
+        table2 += ` <tr>
+                        <td>${z + 1}</td>
+                        <td>${dataPro2[z].straintitle1}</td>
+                        <td>${dataPro2[z].strainPrice1}</td>
+                        <td></td>
+                    </tr>`;
+      }
+      document.getElementById("tbody2").innerHTML = table2;
+      let deleteAll2 = document.getElementById("deleteAll2");
+      if (dataPro2.length > 0) {
+        deleteAll2.innerHTML = ` <button onclick="deleteAll2()"  >Delete All </button>`;
+      } else {
+        deleteAll2.innerHTML = "";
+      }
+    }
+    showData2();
+    
+    function deleteAll2() {
+      localStorage.clear();
+      dataPro2.splice(0);
+      showData2();
+    }
+    const today = new Date();  
+ const endOfMonth = new Date(today.getFullYear(), today.getMonth() +1,0); if (today.getDate() === endOfMonth.getDate()) {  
+ localStorage.clear();  
+ console.log("تم مسح localStorage لأن اليوم هو آخر يوم في الشهر.");  
+}  
+
+    </script>
+<script src="date.js"></script>
+</html>
